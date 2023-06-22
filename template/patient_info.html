@@ -1,0 +1,10 @@
+{% extends "staff_dashboard_base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% load render_table from django_tables2 %}
+
+{% block block %}
+    <h1>List of persons</h1>
+    {% render_table table %}
+{% endblock %}
+

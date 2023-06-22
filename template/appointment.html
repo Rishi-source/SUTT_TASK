@@ -1,0 +1,21 @@
+{% extends "patient_dashboard_base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block dashboard %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto bg-light my-4">
+            <h1>Book An Appointment</h1>
+            {% if status %}
+            <div class="alert alert-primary">{{status}}</div>
+            {% endif %}
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" value="Book Your Appointment" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
